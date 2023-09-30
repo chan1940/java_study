@@ -1,0 +1,7 @@
+public class Line extends Messenger{
+
+    @Override
+    public void send(String text) {
+        System.out.println(text);
+    }
+}

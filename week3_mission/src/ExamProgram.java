@@ -18,12 +18,24 @@ public class ExamProgram {
         printAvg();
     }
 
+    public void inputScore() {
+        System.out.println("몇 기인지 입력.");
+        level = sc.nextInt();
+        System.out.println("HTML 점수.");
+        hscore = sc.nextInt();
+        System.out.println("CSS 점수.");
+        cscore = sc.nextInt();
+        System.out.println("Javascript 점수.");
+        jscore = sc.nextInt();
+    }
+
     public void isSuccess(){
         int sum = hscore + cscore + jscore;
         avg = (double) sum / 3;
         int sum1 = hscore + cscore;
         int sum2 = cscore + jscore;
         int sum3 = hscore + jscore;
+        //list에 담는 코드로 변경
         if(level == 1 || level == 2){
             if (avg >= 60 || sum1 == 200 || sum2 == 200 || sum3 == 200) {
                 System.out.println("합격.");
@@ -62,15 +74,6 @@ public class ExamProgram {
             min = jscore;
         System.out.println("전체 과목 중 최저점은 "+min);
     }
-    public void inputScore() {
-        System.out.println("몇 기인지 입력.");
-        level = sc.nextInt();
-        System.out.println("HTML 점수.");
-        hscore = sc.nextInt();
-        System.out.println("CSS 점수.");
-        cscore = sc.nextInt();
-        System.out.println("Javascript 점수.");
-        jscore = sc.nextInt();
-    }
+
 }
 
